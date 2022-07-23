@@ -99,14 +99,12 @@ public class Person : MonoBehaviour
             _danceHeadLeft = false;
             RotateZ(face, -danceZ);
             RotateZ(hair, -danceZ);
-            RotateZ(bangs, -danceZ);
         }
         else
         {
             _danceHeadLeft = true;
             RotateZ(face, danceZ);
             RotateZ(hair, danceZ);
-            RotateZ(bangs, danceZ);
         }
 
     }
