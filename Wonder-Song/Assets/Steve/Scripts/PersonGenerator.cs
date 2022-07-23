@@ -9,8 +9,8 @@ public class PersonGenerator : MonoBehaviour
     [Header("References")]
     [Space(10)]
 
-    [SerializeField] private PersonLayoutAsset layout;
-    [SerializeField] private GameObject prefab;
+    [Tooltip("Assign one or more person prefabs to use for generation")]
+    [SerializeField] private List<GameObject> prefabs;
 
     [Space(10)]
     [Header("Settings")]
@@ -18,10 +18,14 @@ public class PersonGenerator : MonoBehaviour
 
     [SerializeField] private Vector2 offscreen;
 
+
+    // Public API
+
     public void Generate(Vector2 position, Transform parent)
     {
+        // TODO: choose random prefab
 
-        GameObject go = Instantiate(prefab, offscreen, Quaternion.identity, parent);
+        GameObject go = Instantiate(prefabs[0], offscreen, Quaternion.identity, parent);
 
         // choose random sprites
 

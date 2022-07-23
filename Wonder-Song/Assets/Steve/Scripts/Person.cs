@@ -20,6 +20,17 @@ public class Person : MonoBehaviour
     // TODO: define what a Mood is
     public UnityEvent<GameObject> OnPersonMoodChanged;
 
+    private void Awake()
+    {
+        ChooseHair();
+        ChooseShirt();
+        ChooseFace();
+    }
+
+
+    // Private Methods
+
+
     private void ChooseHair()
     {
 
