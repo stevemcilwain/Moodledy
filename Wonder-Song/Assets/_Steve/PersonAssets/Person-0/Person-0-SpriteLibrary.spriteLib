@@ -59,4 +59,117 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 21300000, guid: 8315a6d4027d852498133105dcf983ee, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 8
+  - m_Name: Faces
+    m_Hash: 152830095
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Face_0
+      m_Hash: -1327221186
+      m_Sprite: {fileID: 21300000, guid: ba045cd85b86e574d91f278df2b46987, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: ba045cd85b86e574d91f278df2b46987, type: 3}
+    - m_Name: Face_1
+      m_Hash: -941422936
+      m_Sprite: {fileID: 21300000, guid: 59adce4228f8b6849a6b5aa96f5b2df0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 59adce4228f8b6849a6b5aa96f5b2df0, type: 3}
+    - m_Name: Face_2
+      m_Hash: 1592416018
+      m_Sprite: {fileID: 21300000, guid: 76d9af980e3092e4c9203fdffde5d11a, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 76d9af980e3092e4c9203fdffde5d11a, type: 3}
+    - m_Name: Face_3
+      m_Hash: 703424388
+      m_Sprite: {fileID: 21300000, guid: 4a284a83ce9830e4ab4834cf2defe548, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 4a284a83ce9830e4ab4834cf2defe548, type: 3}
+    - m_Name: Face_4
+      m_Hash: -1215696345
+      m_Sprite: {fileID: 21300000, guid: 352d541102bea7641b55e5ff0e7b7519, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 352d541102bea7641b55e5ff0e7b7519, type: 3}
+    - m_Name: Face_5
+      m_Hash: -1064385871
+      m_Sprite: {fileID: 21300000, guid: 8216f05709ff6304f8d6ca4d04fa327c, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 8216f05709ff6304f8d6ca4d04fa327c, type: 3}
+    - m_Name: Face_6
+      m_Hash: 1502057227
+      m_Sprite: {fileID: 21300000, guid: 784dcd486bd79234ebaa2bf1acf0db59, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 784dcd486bd79234ebaa2bf1acf0db59, type: 3}
+    - m_Name: Face_7
+      m_Hash: 780182429
+      m_Sprite: {fileID: 21300000, guid: 85a7e7f21a217714d9dd9a85f2f5b33a, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 85a7e7f21a217714d9dd9a85f2f5b33a, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 8
+  - m_Name: Hair
+    m_Hash: 1019596327
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Black
+      m_Hash: 1212454188
+      m_Sprite: {fileID: 21300000, guid: ad3594fbc745407448bd911a346c3581, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: ad3594fbc745407448bd911a346c3581, type: 3}
+    - m_Name: Blond
+      m_Hash: 1741413370
+      m_Sprite: {fileID: 21300000, guid: 376c3372ba0789342bdb40c9e089e5b1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 376c3372ba0789342bdb40c9e089e5b1, type: 3}
+    - m_Name: Brown
+      m_Hash: -1395082416
+      m_Sprite: {fileID: 21300000, guid: 7b5283abe832cf448b084cb3bd84e32d, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 7b5283abe832cf448b084cb3bd84e32d, type: 3}
+    - m_Name: Gray
+      m_Hash: 634228952
+      m_Sprite: {fileID: 21300000, guid: daf013ba5af1c0947b8d58bdb51b3482, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: daf013ba5af1c0947b8d58bdb51b3482, type: 3}
+    - m_Name: Red
+      m_Hash: -1037297297
+      m_Sprite: {fileID: 21300000, guid: 12ee0fc47ba81074bbeb279aa530112f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 12ee0fc47ba81074bbeb279aa530112f, type: 3}
+    - m_Name: Empty
+      m_Hash: -1459219776
+      m_Sprite: {fileID: 0}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 0}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: Bangs
+    m_Hash: -965584994
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Black
+      m_Hash: 1212454188
+      m_Sprite: {fileID: 21300000, guid: a5a156c06cf41c5489cb547061a6e8a6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: a5a156c06cf41c5489cb547061a6e8a6, type: 3}
+    - m_Name: Blond
+      m_Hash: 1741413370
+      m_Sprite: {fileID: 21300000, guid: 435f2a6792944e94d8c2f4a089e48fe5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 435f2a6792944e94d8c2f4a089e48fe5, type: 3}
+    - m_Name: Brown
+      m_Hash: -1395082416
+      m_Sprite: {fileID: 21300000, guid: 6bf4b842703312a41bf332e63c33cd0e, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 6bf4b842703312a41bf332e63c33cd0e, type: 3}
+    - m_Name: Gray
+      m_Hash: 634228952
+      m_Sprite: {fileID: 21300000, guid: ac603bcb0f5b04747aab643c3822c1a7, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: ac603bcb0f5b04747aab643c3822c1a7, type: 3}
+    - m_Name: Red
+      m_Hash: -1037297297
+      m_Sprite: {fileID: 21300000, guid: 0efaa20bc3ac30449a058984e2ea7357, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 0efaa20bc3ac30449a058984e2ea7357, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 5
   m_PrimaryLibraryGUID: 

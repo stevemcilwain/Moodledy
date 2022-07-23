@@ -1,17 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
+[RequireComponent(typeof(LoggingBehavior))]
 public class Person : MonoBehaviour
 {
-
     [Space(10)]
     [Header("References")]
     [Space(10)]
 
     [Tooltip("Assign a layout for this person's sprites")]
     [SerializeField] private PersonLayoutAsset layout;
+
+    [Space(10)]
+
+    [SerializeField] private GameObject hair;
+    [SerializeField] private GameObject bangs;
+    [SerializeField] private GameObject face;
+    [SerializeField] private GameObject shirt;
+    [SerializeField] private GameObject pants;
 
     // Public State
 
@@ -26,24 +33,27 @@ public class Person : MonoBehaviour
         _log = GetComponent<LoggingBehavior>();
     }
 
-    private IEnumerator Start()
+    private void Start()
     {
-
-        yield return null;
+        if (layout == null)
+        {
+            _log.LogError("PersonLayoutAsset is NOT ASSIGNED in the inspector!!!");
+            return;
+        }
 
         _log.LogInfo("Generating a new person...");
 
-        ChooseHair();
-        yield return null;
+        face.GetComponent<SpriteChooser>().Choose();
+        SetPosition(face, layout.FaceY);
 
-        ChooseShirt();
-        yield return null;
+        hair.GetComponent<SpriteHairChooser>().ChooseHairAndBangs();
+        SetPosition(hair, layout.HairY);
+        SetPosition(bangs, layout.BangsY);
 
-        ChooseFace();
-        yield return null;
+        shirt.GetComponent<SpriteChooser>().Choose();
+        SetPosition(shirt, layout.ShirtY);
 
-        ChooseBangs();
-        yield return null;
+        SetPosition(pants, layout.PantsY);
 
         _ready = true;
 
@@ -52,26 +62,9 @@ public class Person : MonoBehaviour
 
     // Private Methods
 
-    private void ChooseHair()
+    private void SetPosition(GameObject go, float y)
     {
-        _log.LogInfo("Choosing hair...");
-
-        // short or long hair?
-    }
-
-    private void ChooseShirt()
-    {
-        _log.LogInfo("Choosing shirt...");
-    }
-
-    private void ChooseFace()
-    {
-        _log.LogInfo("Choosing face...");
-    }
-
-    private void ChooseBangs()
-    {
-        _log.LogInfo("Choosing bangs...");
+        go.transform.localPosition = new Vector2(0f, y);
     }
 
 }
