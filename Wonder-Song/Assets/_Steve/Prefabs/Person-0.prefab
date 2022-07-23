@@ -527,6 +527,8 @@ MonoBehaviour:
   face: {fileID: 6533970628303608505}
   shirt: {fileID: 6533970629177012427}
   pants: {fileID: 6533970629596371231}
+  danceY: 0.1
+  danceZ: 5
 --- !u!114 &1448864286
 MonoBehaviour:
   m_ObjectHideFlags: 0
