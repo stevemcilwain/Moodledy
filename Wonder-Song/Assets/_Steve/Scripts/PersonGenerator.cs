@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PersonGenerator : MonoBehaviour
 {
@@ -18,18 +19,66 @@ public class PersonGenerator : MonoBehaviour
 
     [SerializeField] private Vector2 offscreen;
 
+    // Private State
+    private LoggingBehavior _log;
 
-    // Public API
+    // Unity Lifecycle
 
-    public void Generate(Vector2 position, Transform parent)
+    private void Awake()
     {
-        // TODO: choose random prefab
+        _log = GetComponent<LoggingBehavior>();
+    }
 
-        GameObject go = Instantiate(prefabs[0], offscreen, Quaternion.identity, parent);
+    private void Start()
+    {
 
-        // choose random sprites
+        if (prefabs == null)
+        {
+            _log.LogWarning("No prefabs assigned to generate!");
+            return;
+        }
 
-        // set the position to make it "live"
+        StartCoroutine(GeneratePeople());
 
     }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // kick off loading then
+    }
+
+
+    // Private Methods
+
+    private IEnumerator GeneratePeople()
+    {
+        _log.LogInfo($"Gonna be mekkin' peeple...");
+
+        foreach (GameObject prefab in prefabs)
+        {
+            GameObject go = Instantiate(prefab, offscreen, Quaternion.identity, transform);
+            Person person = go.GetComponent<Person>();
+
+            while (!person.Ready)
+            {
+                yield return null;
+            }
+
+            // TODO: place in the scene somewhere or raise an event
+            person.transform.position = Vector3.zero;
+
+            _log.LogInfo($"Made {person.name}");
+        }
+    }
+
 }
