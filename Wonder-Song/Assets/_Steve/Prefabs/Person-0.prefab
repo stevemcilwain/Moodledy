@@ -393,6 +393,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6533970629966787537}
+  - component: {fileID: 1448864285}
+  - component: {fileID: 1448864286}
   m_Layer: 0
   m_Name: Person-0
   m_TagString: Untagged
@@ -416,6 +418,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1448864285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6533970629966787542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ebf8057ff6df054aaf7f86493ab59c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layout: {fileID: 11400000, guid: f9b6912b05aa875488cf023537c6c3b1, type: 2}
+  OnPersonMoodChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPersonGenerated:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PersonGenerator, Assembly-CSharp
+        m_MethodName: OnPersonGenerated
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1448864286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6533970629966787542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e62abf0bf6efaf841a72c3716e5d2058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logColor: {r: 0.050943315, g: 0.3923699, b: 1, a: 1}
 --- !u!1 &6533970630109484610
 GameObject:
   m_ObjectHideFlags: 0

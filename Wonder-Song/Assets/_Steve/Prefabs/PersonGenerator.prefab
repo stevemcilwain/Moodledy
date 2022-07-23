@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2778746445544529658}
   - component: {fileID: 2778746445544529605}
+  - component: {fileID: 753534113}
   m_Layer: 0
   m_Name: PersonGenerator
   m_TagString: Untagged
@@ -44,6 +45,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c53163ef7eda10489109c8635d87b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layout: {fileID: 0}
-  prefab: {fileID: 0}
-  offscreen: {x: 0, y: 0}
+  prefabs:
+  - {fileID: 6533970629966787542, guid: 20eabb0b9cc4b274b85ea98b77750d37, type: 3}
+  offscreen: {x: 0, y: 20}
+--- !u!114 &753534113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2778746445544529659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e62abf0bf6efaf841a72c3716e5d2058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logColor: {r: 0.050943315, g: 0.3923699, b: 1, a: 1}
