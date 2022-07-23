@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 522b6fdc82fc56241a282763880303b5, type: 3}
   m_Name: Person-0-LayoutAsset
   m_EditorClassIdentifier: 
-  HairY: 1.55
+  HairY: 2.75
   PantsY: 0
-  ShirtY: 0.7
-  FaceY: 2.4
-  BangsY: 3.3
+  ShirtY: 0.35
+  FaceY: 1.2
+  BangsY: 2.42

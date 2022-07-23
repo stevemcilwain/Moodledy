@@ -20,6 +20,10 @@ public class Person : MonoBehaviour
     [SerializeField] private GameObject shirt;
     [SerializeField] private GameObject pants;
 
+    [Space(10)]
+    [SerializeField] private float danceY;
+    [SerializeField] private float danceZ;
+
     // Public State
 
     public bool Ready => _ready;
@@ -28,9 +32,14 @@ public class Person : MonoBehaviour
     private LoggingBehavior _log;
     private bool _ready;
 
+    private bool _danceShirtUp;
+    private bool _danceHeadLeft;
+
     private void Awake()
     {
         _log = GetComponent<LoggingBehavior>();
+        _danceShirtUp = (Random.value > 0.5f);
+        _danceHeadLeft = (Random.value > 0.5f);
     }
 
     private void Start()
@@ -44,27 +53,78 @@ public class Person : MonoBehaviour
         _log.LogInfo("Generating a new person...");
 
         face.GetComponent<SpriteChooser>().Choose();
-        SetPosition(face, layout.FaceY);
+        SetPositionY(face, layout.FaceY);
 
         hair.GetComponent<SpriteHairChooser>().ChooseHairAndBangs();
-        SetPosition(hair, layout.HairY);
-        SetPosition(bangs, layout.BangsY);
+        SetPositionY(hair, layout.HairY);
+        SetPositionY(bangs, layout.BangsY);
 
         shirt.GetComponent<SpriteChooser>().Choose();
-        SetPosition(shirt, layout.ShirtY);
+        SetPositionY(shirt, layout.ShirtY);
 
-        SetPosition(pants, layout.PantsY);
+        SetPositionY(pants, layout.PantsY);
 
         _ready = true;
+
+    }
+
+    private void OnEnable()
+    {
+        GameEventManager.onMusicBeat.AddSubscriber(OnMusicBeat);
+    }
+
+    private void OnDisable()
+    {
+        GameEventManager.onMusicBeat.RemoveSubscriber(OnMusicBeat);
+    }
+
+
+    // Event Handlers
+
+    private void OnMusicBeat()
+    {
+        if (_danceShirtUp)
+        {
+            _danceShirtUp = false;
+            SetY(shirt, -danceY);
+        }
+        else
+        {
+            _danceShirtUp = true;
+            SetY(shirt, danceY);
+        }
+
+        if (_danceHeadLeft)
+        {
+            _danceHeadLeft = false;
+            RotateZ(face, -danceZ);
+            RotateZ(hair, -danceZ);
+        }
+        else
+        {
+            _danceHeadLeft = true;
+            RotateZ(face, danceZ);
+            RotateZ(hair, danceZ);
+        }
 
     }
 
 
     // Private Methods
 
-    private void SetPosition(GameObject go, float y)
+    private void SetPositionY(GameObject go, float y)
     {
-        go.transform.localPosition = new Vector2(0f, y);
+        go.transform.localPosition = new Vector2(go.transform.localPosition.x, y);
+    }
+
+    private void SetY(GameObject go, float y)
+    {
+        go.transform.localPosition = new Vector2(go.transform.localPosition.x, go.transform.localPosition.y + y);
+    }
+
+    private void RotateZ(GameObject go, float z)
+    {
+        go.transform.Rotate(0f, 0f, z, Space.World);
     }
 
 }
