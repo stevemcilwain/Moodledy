@@ -47,7 +47,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 6533970629966787542, guid: 20eabb0b9cc4b274b85ea98b77750d37, type: 3}
-  offscreen: {x: 0, y: 20}
+  countPerPrefab: 7
+  offscreen: {x: 0, y: -40}
+  spawnPoints:
+  - {x: -6, y: 0.6}
+  - {x: -2, y: 0.6}
+  - {x: 2, y: 0.6}
+  - {x: 6, y: 0.6}
+  - {x: 4, y: -4}
+  - {x: 0, y: -4}
+  - {x: -4, y: -4}
 --- !u!114 &753534113
 MonoBehaviour:
   m_ObjectHideFlags: 0
