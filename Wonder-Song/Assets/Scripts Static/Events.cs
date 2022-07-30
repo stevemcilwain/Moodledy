@@ -17,6 +17,9 @@ public static class Events
 
     #endregion
 
+    public static readonly GameEvent onGameStarted = new();
+    public static readonly GameEvent onGameEnded = new();
+
     public static readonly GameEvent onMusicBeat = new();
 
     public static readonly GameEvent<Notes> onMusicNote = new();

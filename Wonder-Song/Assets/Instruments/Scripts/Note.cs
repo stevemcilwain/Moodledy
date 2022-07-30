@@ -17,6 +17,7 @@ public class Note : MonoBehaviour
     private AudioSource _source;
     private SpriteRenderer _renderer;
     private ParticlePool _pool;
+    private bool _isPlaying;
 
     private void Awake()
     {
@@ -25,11 +26,26 @@ public class Note : MonoBehaviour
         _source = GetComponent<AudioSource>();
     }
 
+    private void OnEnable()
+    {
+        Events.onGameStarted.Add(OnGameStarted);
+        Events.onGameEnded.Add(OnGameEnded);
+    }
+
+    private void OnDisbale()
+    {
+        Events.onGameStarted.Remove(OnGameStarted);
+        Events.onGameEnded.Remove(OnGameEnded);
+    }
+
     private void Update()
     {
-        if (Input.GetKeyDown(keyMap))
+        if (_isPlaying)
         {
-            StartCoroutine(Play());
+            if (Input.GetKeyDown(keyMap))
+            {
+                StartCoroutine(Play());
+            }
         }
     }
     private IEnumerator Play()
@@ -44,5 +60,15 @@ public class Note : MonoBehaviour
         yield return new WaitForSeconds(flashSeconds);
         _renderer.color = Color.white;
     }
+
+    private void OnGameStarted()
+    {
+        _isPlaying = true;
+    }
+    private void OnGameEnded()
+    {
+        _isPlaying = false;
+    }
+
 
 }
