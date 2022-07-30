@@ -2,19 +2,27 @@
 
 Moodledy is a musical exploration game, where you can exiperiment with the effects that different melodies have on a person's mood.
 
+![Title.png](D:\Source\Github\SteveMcilwain\Wonder-Song\Title.png)
+
+**Play in Browser**
+
+[https://wondersong.cawtcha.com/](https://wondersong.cawtcha.com/)
+
 ---
 
 This game was built as an entry to the [**Pacifist Game Jam 2022](https://itch.io/jam/honest-jam-4)**.
 
 ---
 
-**Play in Browser**
+### Collaborators
 
-https://wondersong.cawtcha.com/
+- [Ben Poland]([polandbjamin · GitHub](https://github.com/polandbjamin))
 
----
+- [Steve Mcilwain]([stevemcilwain (Steve Mcilwain) (github.com)](https://github.com/stevemcilwain))
 
-## Built with
+
+
+### Built with
 
 - Unity 2021.3 LTS
 
@@ -22,8 +30,4 @@ https://wondersong.cawtcha.com/
 
 
 
-## Collaborators
-
-- [Ben Poland]([polandbjamin · GitHub](https://github.com/polandbjamin))
-
-- [Steve Mcilwain]([stevemcilwain (Steve Mcilwain) (github.com)](https://github.com/stevemcilwain))
+##  [Attributions](ATTRIBUTIONS.md)

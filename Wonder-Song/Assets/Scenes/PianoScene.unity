@@ -284,11 +284,87 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7789662808184097322, guid: 28aafb16ffdf173479f031d347b88c00, type: 3}
   m_PrefabInstance: {fileID: 5114508297479254284}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1110309949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1110309950}
+  m_Layer: 0
+  m_Name: -------------------- Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1110309950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110309949}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1228591162}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1158335335 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 491840539934139717, guid: e1730fa7a36c1c149a6e9942dd1427e6, type: 3}
   m_PrefabInstance: {fileID: 491840538809724450}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1228591161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1228591162}
+  - component: {fileID: 1228591163}
+  m_Layer: 0
+  m_Name: Interpreter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1228591162
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228591161}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1110309950}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1228591163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228591161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f3b15f311332844a81c7bff037925b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1274939657 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5780419200690505330, guid: d8b9698e326b0fc46b090eea5404fb12, type: 3}
@@ -343,6 +419,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 799879469}
     m_Modifications:
+    - target: {fileID: 491840539215451524, guid: e1730fa7a36c1c149a6e9942dd1427e6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 491840539215451530, guid: e1730fa7a36c1c149a6e9942dd1427e6, type: 3}
       propertyPath: m_text
       value: 'Make people happy with a melody.
@@ -397,6 +477,10 @@ PrefabInstance:
     - target: {fileID: 491840539808083936, guid: e1730fa7a36c1c149a6e9942dd1427e6, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294602470
+      objectReference: {fileID: 0}
+    - target: {fileID: 491840539808083938, guid: e1730fa7a36c1c149a6e9942dd1427e6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 491840539934139716, guid: e1730fa7a36c1c149a6e9942dd1427e6, type: 3}
       propertyPath: m_Name

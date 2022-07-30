@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: Eyes
+    m_Hash: 120101800
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Left_Open
+      m_Hash: -1590372362
+      m_Sprite: {fileID: 21300000, guid: 487ae7341e7ccb54fa3c241a751fdd17, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 487ae7341e7ccb54fa3c241a751fdd17, type: 3}
+    - m_Name: Eye_Right_Open
+      m_Hash: 1389857324
+      m_Sprite: {fileID: 21300000, guid: 27387187be1f9a14e829959d8fd0229b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 27387187be1f9a14e829959d8fd0229b, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: Mouths
+    m_Hash: 1918306694
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Neutral
+      m_Hash: 1805245548
+      m_Sprite: {fileID: 21300000, guid: 407d34ed16033da40a310908e6e2de64, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 407d34ed16033da40a310908e6e2de64, type: 3}
+    - m_Name: Smile_1
+      m_Hash: -66575043
+      m_Sprite: {fileID: 21300000, guid: d02092ed5516bea4daddf8c7e188943a, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: d02092ed5516bea4daddf8c7e188943a, type: 3}
+    - m_Name: Smile_2
+      m_Hash: 1694594183
+      m_Sprite: {fileID: 21300000, guid: bffa6c9773dd7004d98c045678d179b1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: bffa6c9773dd7004d98c045678d179b1, type: 3}
+    - m_Name: Frown_1
+      m_Hash: 1063513285
+      m_Sprite: {fileID: 21300000, guid: 7a534b01e1598784ebbb24fb1e277227, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 7a534b01e1598784ebbb24fb1e277227, type: 3}
+    - m_Name: Frown_2
+      m_Hash: -1502954113
+      m_Sprite: {fileID: 21300000, guid: fec6b9650d297224597660e751ab6aed, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: fec6b9650d297224597660e751ab6aed, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 5
+  m_PrimaryLibraryGUID: 

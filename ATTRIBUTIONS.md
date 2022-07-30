@@ -1,12 +1,12 @@
 # Moodledy
 
-
-
 ## Attributions
 
-Font
+Fonts
 
 [Musicals Font | dafont.com](https://www.dafont.com/musicals.font)
+
+[Simple Breakfast Font | Joe Letter | FontSpace](https://www.fontspace.com/simple-breakfast-font-f81938)
 
 Piano Sounds
 
