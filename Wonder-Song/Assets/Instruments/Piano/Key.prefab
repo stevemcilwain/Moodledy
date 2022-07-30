@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3733103548914307513}
   - component: {fileID: 3733103548914307492}
   - component: {fileID: 3733103548914307514}
+  - component: {fileID: -3258187507252938486}
   m_Layer: 0
   m_Name: Key
   m_TagString: Untagged
@@ -195,8 +196,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyMap: 122
-  particleMaterial: {fileID: 2100000, guid: ee8e564ec748ec3469fa36f595ab8c3d, type: 2}
   flashColor: {r: 1, g: 1, b: 1, a: 0.98039216}
   flashSeconds: 0.2
-  particles: {fileID: 8591492670483415881, guid: a150082889e02fe409d60724caa181a9, type: 3}
   note: 0
+--- !u!114 &-3258187507252938486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3733103548914307494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b78f518e8e2b5a4c9a8ce422b34ac93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 8591492670483415881, guid: a150082889e02fe409d60724caa181a9, type: 3}
+  particleMaterial: {fileID: 0}
+  count: 10

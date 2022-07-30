@@ -374,10 +374,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1911902930}
     m_Modifications:
+    - target: {fileID: 571942938642064688, guid: 3251a782fe6ffe548968b9077d926f35, type: 3}
+      propertyPath: particleMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e6f2f71aef9a6b4780bb760a4fee76c, type: 2}
     - target: {fileID: 1058887473419156707, guid: 3251a782fe6ffe548968b9077d926f35, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1923082737148871918, guid: 3251a782fe6ffe548968b9077d926f35, type: 3}
+      propertyPath: particleMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 15eeabf803047224d931ece1913d7655, type: 2}
+    - target: {fileID: 2310811807574469930, guid: 3251a782fe6ffe548968b9077d926f35, type: 3}
+      propertyPath: particleMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 67585e095026cc34da7e878f5a9abe48, type: 2}
+    - target: {fileID: 3892970672111503785, guid: 3251a782fe6ffe548968b9077d926f35, type: 3}
+      propertyPath: particleMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: ee8e564ec748ec3469fa36f595ab8c3d, type: 2}
+    - target: {fileID: 3988732780834862985, guid: 3251a782fe6ffe548968b9077d926f35, type: 3}
+      propertyPath: particleMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 7371cf787c8d3d04392a7f71696e8a49, type: 2}
     - target: {fileID: 6269202462937758632, guid: 3251a782fe6ffe548968b9077d926f35, type: 3}
       propertyPath: m_Name
       value: Piano
@@ -426,5 +446,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7247400322963314515, guid: 3251a782fe6ffe548968b9077d926f35, type: 3}
+      propertyPath: particleMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 3388bd6b7cc95644ba0370096f29ce79, type: 2}
+    - target: {fileID: 8792472037721098091, guid: 3251a782fe6ffe548968b9077d926f35, type: 3}
+      propertyPath: particleMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 13398e4d3581fda44944950bf043edd1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3251a782fe6ffe548968b9077d926f35, type: 3}

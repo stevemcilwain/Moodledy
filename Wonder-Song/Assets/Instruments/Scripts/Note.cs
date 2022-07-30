@@ -8,19 +8,19 @@ public class Note : MonoBehaviour
 {
 
     [SerializeField] private KeyCode keyMap;
-    [SerializeField] private Material particleMaterial;
     [SerializeField] private Color flashColor;
     [SerializeField] private float flashSeconds;
-    [SerializeField] private ParticleSystem particles;
     [SerializeField] private Notes note;
 
     // Private State and Cache
 
     private AudioSource _source;
     private SpriteRenderer _renderer;
+    private ParticlePool _pool;
 
     private void Awake()
     {
+        _pool = GetComponent<ParticlePool>();
         _renderer = GetComponent<SpriteRenderer>();
         _source = GetComponent<AudioSource>();
     }
@@ -38,18 +38,11 @@ public class Note : MonoBehaviour
 
         _source.PlayOneShot(_source.clip);
 
-        Emit();
+        _pool.Get().Play();
 
         _renderer.color = flashColor;
         yield return new WaitForSeconds(flashSeconds);
         _renderer.color = Color.white;
-    }
-
-    private void Emit()
-    {
-        var p = Instantiate<ParticleSystem>(particles, transform.position, Quaternion.identity);
-        p.GetComponent<ParticleSystemRenderer>().material = particleMaterial;
-        p.Play();
     }
 
 }

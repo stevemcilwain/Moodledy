@@ -1,5 +1,5 @@
+
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Expire : MonoBehaviour
@@ -7,9 +7,15 @@ public class Expire : MonoBehaviour
 
     [SerializeField] private float timeToLive;
 
-    private void Start()
+    private void OnEnable()
     {
-        Destroy(gameObject, timeToLive);
+        StartCoroutine(Deactivate());
+    }
+
+    private IEnumerator Deactivate()
+    {
+        yield return new WaitForSeconds(timeToLive);
+        gameObject.SetActive(false);
     }
 
 }
