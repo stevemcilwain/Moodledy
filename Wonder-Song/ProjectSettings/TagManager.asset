@@ -47,3 +47,6 @@ TagManager:
   - name: people
     uniqueID: 103409757
     locked: 0
+  - name: instrument
+    uniqueID: 619070607
+    locked: 0

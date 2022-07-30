@@ -7,6 +7,6 @@ public class BeatGenerator : MonoBehaviour
 
     public void Beat()
     {
-        GameEventManager.onMusicBeat.Publish();
+        Events.onMusicBeat.Publish();
     }
 }

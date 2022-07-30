@@ -70,12 +70,12 @@ public class Person : MonoBehaviour
 
     private void OnEnable()
     {
-        GameEventManager.onMusicBeat.AddSubscriber(OnMusicBeat);
+        Events.onMusicBeat.Add(OnMusicBeat);
     }
 
     private void OnDisable()
     {
-        GameEventManager.onMusicBeat.RemoveSubscriber(OnMusicBeat);
+        Events.onMusicBeat.Remove(OnMusicBeat);
     }
 
 

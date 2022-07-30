@@ -9,12 +9,12 @@ public class GameEvent
         _action?.Invoke();
     }
 
-    public void AddSubscriber(Action subscriber)
+    public void Add(Action subscriber)
     {
         _action += subscriber;
     }
 
-    public void RemoveSubscriber(Action subscriber)
+    public void Remove(Action subscriber)
     {
         _action -= subscriber;
     }
@@ -29,12 +29,12 @@ public class GameEvent<T>
         _action?.Invoke(param);
     }
 
-    public void AddSubscriber(Action<T> subscriber)
+    public void Add(Action<T> subscriber)
     {
         _action += subscriber;
     }
 
-    public void RemoveSubscriber(Action<T> subscriber)
+    public void Remove(Action<T> subscriber)
     {
         _action -= subscriber;
     }

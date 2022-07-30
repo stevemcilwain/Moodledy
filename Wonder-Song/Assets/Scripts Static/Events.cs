@@ -1,13 +1,12 @@
-using System;
 using UnityEngine;
 
-public static class GameEventManager
+public static class Events
 {
 
     [RuntimeInitializeOnLoadMethod]
     static void OnRuntimeMethodLoad()
     {
-        Debug.Log("GameEventManager has loaded.");
+        Debug.Log("Events static class has loaded.");
     }
 
     #region ---------------------------------------- TEMPLATES
@@ -19,5 +18,9 @@ public static class GameEventManager
     #endregion
 
     public static readonly GameEvent onMusicBeat = new();
+
+    public static readonly GameEvent<Notes> onMusicNote = new();
+
+
 
 }
