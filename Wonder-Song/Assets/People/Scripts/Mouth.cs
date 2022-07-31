@@ -6,20 +6,32 @@ using UnityEngine.U2D.Animation;
 public class Mouth : MonoBehaviour
 {
 
-    [SerializeField] private float neutralizerInterval;
+    [Header("Mood Thresholds")]
+    [Space(10)]
+
+    [SerializeField] private int moodTop = 50;
+    [SerializeField] private int moodBottom = -50;
+
+    [Header("Smiles")]
+    [Space(10)]
+    [SerializeField] private int moodSmile1 = 15;
+    [SerializeField] private int moodSmile2 = 30;
+
+    [Header("Frowns")]
+    [Space(10)]
+    [SerializeField] private int moodFrown1 = -15;
+    [SerializeField] private int moodFrown2 = -30;
+
 
     protected SpriteResolver _resolver;
     protected string _category = "Mouths";
     protected List<string> _labels;
 
-    private int _happyCount;
-    private int _sadCount;
-
-    private WaitForSeconds _interval;
+    [Space(10)]
+    public int _mood;
 
     private void Awake()
     {
-
         _resolver = GetComponentInChildren<SpriteResolver>();
         _labels = new List<string>();
         _labels.AddRange(_resolver.spriteLibrary.spriteLibraryAsset.GetCategoryLabelNames(_category));
@@ -28,14 +40,12 @@ public class Mouth : MonoBehaviour
 
     private void OnEnable()
     {
-        neutralizerInterval = 0.5f;
-        _interval = new WaitForSeconds(neutralizerInterval);
-        _happyCount = 0;
-        _sadCount = 0;
+        _mood = 0;
         _resolver.SetCategoryAndLabel(_category, _labels[0]);
-        StartCoroutine(Neutralizer());
+
         Events.onHappyNotes.Add(OnHappyNotes);
         Events.onSadNotes.Add(OnSadNotes);
+        Events.onNeutralNotes.Add(OnNeutralNotes);
     }
 
     private void OnDisable()
@@ -43,6 +53,7 @@ public class Mouth : MonoBehaviour
         StopAllCoroutines();
         Events.onHappyNotes.Remove(OnHappyNotes);
         Events.onSadNotes.Remove(OnSadNotes);
+        Events.onNeutralNotes.Remove(OnNeutralNotes);
     }
 
 
@@ -51,13 +62,26 @@ public class Mouth : MonoBehaviour
 
         string label = _labels[0];
 
-        if (_happyCount > 5 && _happyCount < 20)
+        // Smile Conditions
+
+        if (_mood >= moodSmile1 && _mood < moodSmile2)
         {
             label = _labels[1];
         }
-        else if (_happyCount >= 20)
+        else if (_mood >= moodSmile2)
         {
             label = _labels[2];
+        }
+
+        // Frown Conditions
+
+        if (_mood <= moodFrown1 && _mood > moodFrown2)
+        {
+            label = _labels[3];
+        }
+        else if (_mood <= moodFrown2)
+        {
+            label = _labels[4];
         }
 
         _resolver.SetCategoryAndLabel(_category, label);
@@ -66,26 +90,25 @@ public class Mouth : MonoBehaviour
 
     private void OnHappyNotes()
     {
-        _happyCount++;
+        if (_mood >= moodTop) return;
+        _mood++;
+
     }
 
     private void OnSadNotes()
     {
-        string label = _labels[3];
-        _resolver.SetCategoryAndLabel(_category, label);
+        if (_mood <= moodBottom) return;
+        _mood--;
     }
 
-    private IEnumerator Neutralizer()
+    private void OnNeutralNotes()
     {
-        while (true)
-        {
-            yield return _interval;
+        // return mood to neutral
 
-            if (_happyCount > 0) _happyCount--;
-            if (_sadCount > 0) _sadCount--;
-        }
+        if (_mood == 0) return;
 
+        if (_mood < 0) _mood++;
 
+        if (_mood > 0) _mood--;
     }
-
 }

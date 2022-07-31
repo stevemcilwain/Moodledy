@@ -2,7 +2,7 @@
 
 Moodledy is a musical exploration game, where you can exiperiment with the effects that different melodies have on a person's mood.
 
-![Title.png](D:\Source\Github\SteveMcilwain\Wonder-Song\Title.png)
+![Moodledy](Title.png)
 
 **Play in Browser**
 
@@ -10,7 +10,7 @@ Moodledy is a musical exploration game, where you can exiperiment with the effec
 
 ---
 
-This game was built as an entry to the [**Pacifist Game Jam 2022](https://itch.io/jam/honest-jam-4)**.
+This game was built as an entry to the **[Pacifist Game Jam 2022 (Honest Jam IV)](https://itch.io/jam/honest-jam-4)**.
 
 ---
 
@@ -20,14 +20,10 @@ This game was built as an entry to the [**Pacifist Game Jam 2022](https://itch.i
 
 - [Steve Mcilwain]([stevemcilwain (Steve Mcilwain) (github.com)](https://github.com/stevemcilwain))
 
-
-
 ### Built with
 
 - Unity 2021.3 LTS
 
 - Adobe Illustrator
 
-
-
-##  [Attributions](ATTRIBUTIONS.md)
+## [Attributions](ATTRIBUTIONS.md)

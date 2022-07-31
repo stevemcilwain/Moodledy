@@ -24,8 +24,9 @@ public static class Events
 
     public static readonly GameEvent<Notes> onMusicNote = new();
 
+    // Notes
+    public static readonly GameEvent onNeutralNotes = new();
     public static readonly GameEvent onHappyNotes = new();
-
     public static readonly GameEvent onSadNotes = new();
 
 }

@@ -71,11 +71,13 @@ public class Person : MonoBehaviour
     private void OnEnable()
     {
         Events.onMusicBeat.Add(OnMusicBeat);
+        Events.onGameEnded.Add(OnGameEnded);
     }
 
     private void OnDisable()
     {
         Events.onMusicBeat.Remove(OnMusicBeat);
+        Events.onGameEnded.Remove(OnGameEnded);
     }
 
 
@@ -109,6 +111,10 @@ public class Person : MonoBehaviour
 
     }
 
+    private void OnGameEnded()
+    {
+        Destroy(gameObject);
+    }
 
     // Private Methods
 

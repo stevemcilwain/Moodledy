@@ -47,19 +47,25 @@ public class PersonGenerator : MonoBehaviour
 
     private void OnEnable()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        Events.onGameStarted.Add(OnGameStarted);
+        Events.onGameEnded.Add(OnGameEnded);
     }
 
     private void OnDisable()
     {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
+        Events.onGameStarted.Remove(OnGameStarted);
+        Events.onGameEnded.Remove(OnGameEnded);
     }
 
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    private void OnGameStarted()
     {
         StartCoroutine(GeneratePeople());
     }
 
+    private void OnGameEnded()
+    {
+
+    }
 
     // Private Methods
 
@@ -84,8 +90,6 @@ public class PersonGenerator : MonoBehaviour
 
                 _log.LogInfo($"Made {person.name}");
             }
-
-
         }
     }
 

@@ -1,12 +1,12 @@
 
 public enum Notes
 {
-    C,
-    D,
-    E,
-    F,
-    G,
-    A,
-    B,
-    C1
+    C = 1,
+    D = 2,
+    E = 3,
+    F = 4,
+    G = 5,
+    A = 6,
+    B = 7,
+    C1 = 8
 }
