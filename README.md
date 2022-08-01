@@ -2,7 +2,7 @@
 
 Moodledy is a musical exploration game, where you can exiperiment with the effects that different melodies have on a person's mood.
 
-![Title.png](D:\Source\Github\SteveMcilwain\Wonder-Song\Title.png)
+![Moodledy](Title.png)
 
 **Play in Browser**
 
