@@ -4,9 +4,7 @@ Moodledy is a musical exploration game, where you can exiperiment with the effec
 
 ![Moodledy](Title.png)
 
-**Play in Browser**
-
-[https://wondersong.cawtcha.com/](https://wondersong.cawtcha.com/)
+[Play](https://playabledesign.itch.io/moodledy/)
 
 ---
 
